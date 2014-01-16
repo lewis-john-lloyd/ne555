@@ -1,0 +1,148 @@
+\input{../preamble.tex}
+\renewcommand{\DocTitle}{Quiz 01}
+\noprintanswers
+\addpoints
+
+%-------------------------------------------------------------------------------------
+\begin{document}
+%-------------------------------------------------------------------------------------
+\begin{coverpages}
+\begin{center}
+\textbf{\DocTitle}
+\end{center}
+
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+\vfill
+\flushright{
+\gradetable[h]
+}
+\end{coverpages}
+%-------------------------------------------------------------------------------------
+\begin{flushleft}
+\begin{center}
+\fbox{\fbox{\parbox{5.5in}{\centering
+Above all: Be explicit and concise.
+If you run out of room for an answer, continue on the back of the page.
+Partial credit will be based on how well I think you understand the physics of interest, so please be very clear.}}}
+\end{center}
+\vspace{0.1in}
+%-------------------------------------------------------------------------------------
+\begin{questions}
+\question[20]{
+Write down a differential equation for the time-dependent, continuous-energy, neutron diffusion equation in a multiplying media, with two source terms: an external neutron and a delayed neutron source.
+Describe what each term represents.
+\fullwidth{\begin{solution}
+$\underbrace{\frac{1}{v}\frac{\partial \phi}{\partial t}}_{1} = 
+-\underbrace{\nabla\cdot(-D\nabla\phi)}_{2} 
+-\underbrace{\Sigma_t\phi}_{3} 
++ \underbrace{\int\limits_0^{\infty}\Sigma_s(E'\rightarrow E)\phi(E')dE'}_{4}
++\underbrace{\chi(E)\int\limits_0^{\infty}\nu(E')\Sigma_f(E')\phi(E')dE'}_{5}$
+\begin{enumerate}
+\item{$\displaystyle\frac{1}{v}\frac{\partial \phi}{\partial t}$
+represents the time rate of change of the total number of neutrons.
+}
+\item{$\displaystyle-\nabla\cdot(-D\nabla\phi)$
+represents the divergence of the neutron current within a control volume.
+}
+\item{$\displaystyle-\Sigma_t\phi$
+represents the rate at neutrons are removed from one particular energy via all possible interactions with other particles within a control volume.
+}
+\item{$\displaystyle\int\limits_0^{\infty}\Sigma_s(E'\rightarrow E)\phi(E')dE'$
+represents the rate at which neutrons are scattered into one particular energy from all other energies within a control volume.
+}
+\item{$\displaystyle\chi(E)\int\limits_0^{\infty}\nu(E')\Sigma_f(E')\phi(E')dE'$
+represents the rate at which neutrons of a given energy are being produced through fission within the control volume.
+}
+\end{enumerate}
+\end{solution}}}
+\pagebreak
+%-------------------------------------------------------------------------------------
+\question[20]{
+Starting from your solution to problem 1.
+Using the following separation of variables, $\phi(\textbf{x},E,t)\, =\, P(t)\,f(\textbf{x})\,g(E)$, formally integrate the equation over energy and space. 
+$f(\textbf{x})$ and $g(E)$ are normalized space and energy distribution functions.
+Be \textbf{SURE} to clearly highlight any assumptions that you make along the way.
+Make sure to define any variables you use.
+
+\fullwidth{\begin{solution}
+
+\end{solution}}}
+\pagebreak
+%-------------------------------------------------------------------------------------
+\question[20]{
+Starting from the six group point reactor kinetics equations without external sources, collapse the equations into the one delayed group point reactor kinetics equations.
+Use a method that accurately captures the delayed neutron source, not the total delayed neutron precursor population.
+
+\fullwidth{\begin{solution}[0.75in]
+
+\end{solution}}}
+\pagebreak
+%-------------------------------------------------------------------------------------
+\question[20]{
+Solve for $y(t)$ from the following system of differential equations using Laplace Transforms.
+Note: You don't need a closed form solution for $x(t)$, just $y(t)$.
+\begin{minipage}{0.4\linewidth}\begin{eqnarray*}
+\frac{dy}{dt} & = & 4\,y(t) + 2\,x(t) \\
+\frac{dx}{dt} & = & 2\,y(t) + 4\,x(t)
+\end{eqnarray*}\end{minipage}
+,
+\begin{minipage}{0.4\linewidth}\begin{eqnarray*}
+y(0) & = & 1 \\
+x(0) & = & 5
+\end{eqnarray*}\end{minipage}
+\fullwidth{\begin{solution}[0.75in]
+
+\end{solution}}}
+\pagebreak
+%-------------------------------------------------------------------------------------
+\question[10]{
+What is the difference between $\lambda_{ave}$ and $\lambda_{inv}$ in both formulation and meaning?
+\fullwidth{\begin{solution}[0.75in]
+
+\end{solution}}}
+%-------------------------------------------------------------------------------------
+\question[10]{
+What is the Inhour Equation for the 6DG PRKE?
+\fullwidth{\begin{solution}[0.75in]
+
+\end{solution}}}
+%-------------------------------------------------------------------------------------
+\end{questions}\end{flushleft}
+\pagebreak
+\thispagestyle{head}
+\begin{center}
+\textbf{Laplace Transforms}
+\end{center}
+
+
+\textbf{Function} \hfill \textbf{Transform}
+
+$1$ \hfill $\displaystyle\frac{1}{s}$
+
+$a$, a is a constant \hfill $\displaystyle\frac{a}{s}$
+
+$\delta(t-\tau)$, $\delta$ is the Dirac Delta function \hfill $e^{-\tau\, s}$
+
+$H(t-\tau)$, H is the Heaviside function \hfill $\displaystyle\frac{e^{-\tau\,s}}{s}$
+
+$t\;H(t)$ \hfill $\displaystyle\frac{1}{s^2}$
+
+$e^{at}$ \hfill $\displaystyle\frac{1}{s-a}$
+
+$sin(a t)$ \hfill $\displaystyle\frac{a}{s^2+a^2}$
+
+$cos(a t)$ \hfill $\displaystyle\frac{s}{s^2+a^2}$
+
+$f(t)$ \hfill $\tilde{f}(s)$
+
+$\displaystyle\frac{df(t)}{dt}$ \hfill $s \tilde{f}(s) - f(0)$
+
+
+
+
+
+
+
+
+
+\end{document}

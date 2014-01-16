@@ -1,0 +1,155 @@
+\input{../preamble.tex}
+\renewcommand{\DocTitle}{Quiz 02}
+\renewcommand{\CourseName}{Nuclear Reactor Dynamics}
+\renewcommand{\CourseNumber}{NE555}
+\noprintanswers
+\addpoints
+
+%-------------------------------------------------------------------------------------
+\begin{document}
+%-------------------------------------------------------------------------------------
+\begin{coverpages}
+\begin{center}
+\textbf{\DocTitle}
+\end{center}
+
+\makebox[\textwidth]{Name:\enspace\hrulefill}
+
+\begin{center}
+\fbox{\fbox{\parbox{5.5in}{\centering
+Look and the last page for material properties.
+Partial credit will be based on the quality and understandability of your work.
+}}}
+\end{center}
+
+\vfill
+\flushright{
+\gradetable[h]
+}
+\end{coverpages}
+%-------------------------------------------------------------------------------------
+\begin{questions}
+%-------------------------------------------------------------------------------------
+\question[50]{
+A graphite fuel pebble in a PBMR has an outer diameter of 6 [cm].
+The pebble is cooled by the forced convection of helium, T$_{bulk}$ = 800 [K], with a heat transfer coefficient of 500 [$\frac{W}{m^2\cdot K}$]. The uranium containing TRISO particles are uniformly distributed throughout the inner 5 [cm] diameter sphere, yielding a uniform volumetric heat source of 30 [$\frac{MW}{m^3}$] during steady state operations.
+
+Currently there is concern regarding EMF interference at nuclear power plants. 
+Stray EMF, such as that from walkie talkie use, can induce current in some unshielded electric circuits.
+At a hypothetical PBMR plant, this stray EMF has caused a control rod bank to eject, causing an instantaneous insertion of worth $\rho_o = \frac{\beta}{5}$. 
+It takes the plant operators a minute to recognize the problem, cycle the control circuits, and reinsert the errant control rod bank.
+The PBMR has a negative temperature coefficient of reactivity (see last page), which helps damp the power excursion.
+
+
+Using a lumped parameter model for the pebble and the 1DG PRKE (do not use linearized point reactor kinetics) approximation, plot the average temperature of a fuel pebble and the total power (not volumetric power) of the pebble for ten minutes.
+
+What is the volumetric power of the pebble after the transient has occurred?
+
+Show your work. 
+
+\fullwidth{\begin{solution}
+
+\end{solution}}}
+%-------------------------------------------------------------------------------------
+\question[25]{
+Using 1DG linearized point reactor kinetics, draw the block diagram for problem 1.
+Do not combine transfer functions.
+Make sure that any scaling functions are taken into account.
+Explain why this is useful.
+Find the transfer function for the system with the external reactivity being the input and the pebble temperature being the output.
+\fullwidth{\begin{solution}
+
+\end{solution}}}
+%-------------------------------------------------------------------------------------
+\question[50]{
+A PWR UO$_2$ fuel pellet has a diameter of 9.3 [mm] and is insulated from the cladding by a helium gas gap. 
+The zirconium cladding is 0.62 [mm] thick and has an outer diameter of 10.7 [mm].
+The fuel rods are arrayed in a square lattice with a pitch-diameter ratio of 1.32.
+The coolant, H$_2$O, is flowing past the fuel with a velocity of 3.5 [$\frac{m}{s}$] with a bulk temperature of 590 [K].
+Use the Dittus-Boelter correlation for forced convection, $Nu = 0.023 Pr^{0.4} Re^{0.8}$, to find the heat transfer coefficient.
+
+The fuel pellet experiences slight self-shielding, leading to an internal heat generation given by:
+$$q(t,r)''' = q(t)'''\left(1+0.12(\frac{r}{R})^2\right)$$
+The initial average volumetric heat generation in the fuel pellet is 300 [$\frac{MW}{m^3}$].
+
+Due to a malfunction of the boric acid pump, there is a slight increase in the concentration of boric acid leading to a negative reactivity insertion into the system of $\rho = -195$ [pcm].
+
+The fuel has a negative temperature coefficient of reactivity, $\alpha_{T_f} = -3.25 $ [pcm], based upon the weighted radial temperature, $\bar{T}=\displaystyle \frac{\int\limits_{0}^{R_{Fuel}}T(t,r)w(r)r dr}{\int\limits_{0}^{R_{Fuel}}w(r)r dr}$.
+The weight function to use when collapsing the radial temperature is $w(r) = J_o(2.40483\frac{r}{R_{Fuel}})$.
+Use the linearized PRKE assumption to model this transient.
+
+Plot the radial temperature distribution at 10, 20, and 30 seconds.
+Plot the average fuel temperature from zero to 100 seconds.
+
+\fullwidth{\begin{solution}
+\end{solution}}}
+
+%-------------------------------------------------------------------------------------
+\question[25]{
+
+Try problem three using a lumped parameter model for the weighted radial fuel temperature.
+
+\fullwidth{\begin{solution}
+\end{solution}}}
+
+%-------------------------------------------------------------------------------------
+\end{questions}
+\pagebreak
+\thispagestyle{head}
+\begin{center}
+\textbf{Laplace Transforms}
+\end{center}
+
+
+\textbf{Function} \hfill \textbf{Transform}
+
+$1$ \hfill $\displaystyle\frac{1}{s}$
+
+$a$, a is a constant \hfill $\displaystyle\frac{a}{s}$
+
+$\delta(t-\tau)$, $\delta$ is the Dirac Delta function \hfill $e^{-\tau\, s}$
+
+$H(t-\tau)$, H is the Heaviside function \hfill $\displaystyle\frac{e^{-\tau\,s}}{s}$
+
+$t\;H(t)$ \hfill $\displaystyle\frac{1}{s^2}$
+
+$e^{at}$ \hfill $\displaystyle\frac{1}{s-a}$
+
+$sin(a t)$ \hfill $\displaystyle\frac{a}{s^2+a^2}$
+
+$cos(a t)$ \hfill $\displaystyle\frac{s}{s^2+a^2}$
+
+$f(t)$ \hfill $\tilde{f}(s)$
+
+$\displaystyle\frac{df(t)}{dt}$ \hfill $s \tilde{f}(s) - f(0)$
+
+\pagebreak
+\textbf{\underline{Kinetics Parameters}}
+
+Use these kinetics parameters for all problems.
+
+$\lambda$ = 0.0767194 [$\frac{1}{s}$]\\
+$\beta$ = 0.00650 [-] \\
+$\Lambda$ = 7.6427e-06 [s]
+
+\textbf{\underline{Material Properties}}
+
+\setlength{\extrarowheight}{2.0pt}
+\begin{tabular}{l c c c c c}
+& UO$_2$ & He & Zr & H$_2$O & Graphite\\
+Thermal Conductivity [$\frac{W}{m\;K}$] & 3.0 		& 0.25 		& 17.0 		& 0.5101 	& 60.0	 \\
+Heat Capacity [$\frac{J}{kg\;K}$] 		& 325.0 	& 5182.0 	& 320.9		& 5997.0	& 710.0  \\
+Density [$\frac{kg}{m^3}$]				& 10970.0 	& 12.24		& 6534.0	& 688.6		& 2267.0 \\
+Viscosity [$\frac{kg}{m\;s}$] 			& 			& 			& 			& 0.00008187& 		 \\
+Prandtl Number [$-$] 					& 			& 			& 			& 0.9625	&        \\
+$\alpha_{T_f}$ [$\frac{pcm}{K}$] *		& 			&			&			&			& -0.325
+\end{tabular}
+
+* $\alpha_{T_f}$ is the Temperature Coefficient of Reactivity in percent mili-k per delta K.
+
+\ifprintanswers
+\begin{landscape}
+\end{landscape}
+\fi
+
+\end{document}

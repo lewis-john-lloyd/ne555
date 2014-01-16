@@ -1,0 +1,21 @@
+\input{../../preamble.tex}
+\renewcommand{\DocTitle}{Reactivity Coefficients}
+\renewcommand{\CourseName}{Nuclear Reactor Dynamics}
+\renewcommand{\CourseNumber}{NE555}
+\noprintanswers
+\addpoints
+
+%-------------------------------------------------------------------------------------
+\begin{document}
+\center{\textbf{\underline{\DocTitle}}}
+
+\begin{align*}
+\frac{ \partial \rho}{\partial t} & = +\rho_o \delta(t)+ \alpha_{T_F}\frac{\partial T_{F}}{\partial t}U(t)\\
+\int\limits_{-\infty}^{t}\frac{ \partial \rho}{\partial s} ds & = \int\limits_{-\infty}^{t}\rho_o \delta(s) ds + \int\limits_{-\infty}^{t} \alpha_{T_F}\frac{\partial T_{F}}{\partial s}\;U(s)\;ds\\
+\int\limits_{-\infty}^{t}\frac{ \partial \rho}{\partial s} ds & = \rho_o U(t) + \int\limits_{0}^{t} \alpha_{T_F}\frac{\partial T_{F}}{\partial s} ds\\
+\int\limits_{\rho(-\infty)}^{\rho(t)} d( \rho(s)) & = \rho_o U(t) + \alpha_{T_F} \int\limits_{T_F(0)}^{T_F(t)} d (T_{F}(s))\\
+\rho(t)-\rho(-\infty) & = \rho_o U(t)+ \alpha_{T_F} (T_F(t)-T_F(0))\\
+\rho(t) & = \rho_o +\alpha_{T_F}\left((T_F(t)-T_F(0)\right)
+\end{align*}
+
+\end{document}

@@ -1,0 +1,83 @@
+\input{../preamble.tex}
+\renewcommand{\DocTitle}{Problem Set 04}
+\noprintanswers
+
+%-------------------------------------------------------------------------------------
+\begin{document}
+%-------------------------------------------------------------------------------------
+\begin{center}
+\textbf{\DocTitle}
+\end{center}
+%-------------------------------------------------------------------------------------
+\begin{questions}
+%-------------------------------------------------------------------------------------
+\question{
+	This problem deals with the following differential equation:
+ $$\displaystyle \frac{d u(t)}{d t} = \lambda\left(u(t)-cos(t)\right)-sin(t),\; u(t_o) = \eta$$
+The analytical solution to this differential equation given by:
+ $$\displaystyle u(t) = e^{\lambda\;(t-t_o)}(\eta-cos(t_o))+cos(t)$$	
+
+	\begin{parts}
+		\part[10]{
+		Let $\lambda$, $t_o$, and $\eta$ be $-2100$, $0$ and $1.0$, respectively.
+		What is the maximum time step possible to achieve a stable algorithm for Forward Euler?
+		Answer the question analytically following the procedure presented in class.
+		}
+		\part{
+		Let $\lambda = -10^{6}$, $t_o = 0$ and $\eta = 1.0$ be the data for the following subparts.
+			\begin{subparts}
+				\subpart[10]{
+				Use the Backward Euler method to numerically solve the differential equation out to $t=4.0\;[s]$.
+				Use the following five time step sizes: $k = (0.5,0.1,0.05,0.01,0.005)$.
+				Report the difference between the numerical solution and the analytic, $abs\left|U^{N}-u\right|$, solution at $t=4.0\;[s]$ for each time step size.
+					\fullwidth{
+						\begin{solution}
+					
+						\end{solution}
+					}
+				}
+				\subpart[10]{
+				Use the Trapezoidal method to numerically solve the differential equation out to $t=4.0\;[s]$ with the following five time step sizes: $k = (0.5,0.1,0.05,0.01,0.005)$. Report the difference between the numerical solution and the analytic, $abs\left|U^{N}-u\right|$, solution at $t=4.0\;[s]$ for each time step size.
+					\fullwidth{
+						\begin{solution}
+
+						\end{solution}
+					}
+				}
+			\end{subparts}
+		}
+		\part{
+		Let $\lambda = -10^{6}$, $t_o = 0$ and $\eta = 1.5$ be the data for the following subparts.
+			\begin{subparts}
+				\subpart[10]{
+				Use the Backward Euler method to numerically solve the differential equation out to $t=4.0\;[s]$ with the following five time step sizes: $k = (0.5,0.1,0.05,0.01,0.005)$. Report the difference between the numerical solution and the analytic, $abs\left|U^{N}-u\right|$, solution at $t=4.0\;[s]$ for each time step size.			
+					\fullwidth{
+						\begin{solution}
+
+						\end{solution}
+					}
+				}			
+				\subpart[10]{
+				Use the Trapezoidal method to numerically solve the differential equation out to $t=4.0\;[s]$ with the following five time step sizes: $k = (0.5,0.1,0.05,0.01,0.005)$. Report the difference between the numerical solution and the analytic, $abs\left|U^{N}-u\right|$, solution at $t=4.0\;[s]$ for each time step size.		
+					\fullwidth{
+						\begin{solution}
+
+						\end{solution}
+					}
+				}
+			\end{subparts}
+		
+		}
+	\end{parts}
+}
+%-------------------------------------------------------------------------------------
+\end{questions}
+
+\ifprintanswers
+\begin{landscape}
+\includepdf[landscape=true]{PS03Q01pic.pdf}
+\includepdf[landscape=true]{PS03Q02pic.pdf}
+\end{landscape}
+\fi
+
+\end{document}
